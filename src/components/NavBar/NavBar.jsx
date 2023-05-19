@@ -24,14 +24,14 @@ const NavBar = () => {
               <a className="btn btn-ghost normal-case text-xl">The Chinese Flavours</a>
           </div>
           <div className="navbar-center hidden lg:flex">
-              <ul className="menu menu-horizontal px-1">
-                  <button  className='mx-3 bg-green-500 p-3 rounded-xl'>Home</button>
-                  <button  className='mx-3'>Blog</button>
-                  
-                 
-                  
-              </ul>
-          </div>
+                    <ul className="menu menu-horizontal px-1">
+                        <Link to="/" className='mx-3'>Home</Link>
+                        <Link to="/blog" className='mx-3'>Blog</Link>
+                        
+                       
+                        
+                    </ul>
+                </div>
           <div className="navbar-end">
           {
                       user ? <div className='flex items-center gap-4'> 
