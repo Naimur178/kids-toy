@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../provider/AuthProvider';
+import { Link } from 'react-router-dom';
+import { FaUserCircle } from "react-icons/fa";
 
 const NavBar = () => {
+    const {user, logOut} = useContext(AuthContext);
+    const handleLogOut=() =>{
+        logOut()
+        .then()
+        .catch(console.error())
+    }
     return (
       <div>
       <div className="navbar bg-gray-300 pb-3">
@@ -23,7 +32,7 @@ const NavBar = () => {
                   
               </ul>
           </div>
-          {/* <div className="navbar-end">
+          <div className="navbar-end">
           {
                       user ? <div className='flex items-center gap-4'> 
                           <div className='tooltip tooltip-bottom' data-tip={user.displayName}>
@@ -35,7 +44,7 @@ const NavBar = () => {
                       <Link to="/login" className='mx-3 btn btn-outline '>Log in</Link>
                   
                   }
-          </div> */}
+          </div>
       </div>
       {/* <div className="navbar bg-green-500 text-neutral-content justify-between lg-ps-3">
           <a className="btn btn-ghost normal-case text-xl lg:p">daisyUI</a>

@@ -2,8 +2,8 @@ import React from "react";
 
 const Review = () => {
   return (
-    <div>
-      <h2>Customer Review</h2>
+    <div className="">
+      <h2 className="text-3xl font-bold text-center mt-5">Customer Review</h2>
       <div className="grid lg:grid-cols-2 gap-6 my-8">
         <div className="bg-base-300">
           <div>
