@@ -20,9 +20,10 @@ const AddToy = () => {
         const category = form.category.value;
         const details = form.details.value;
         const photo = form.photo.value;
+        const rating = form.rating.value;
         
 
-        const newToy = { name, quantity, supplier, price, category, details, photo, userId }
+        const newToy = { name, quantity, supplier, price, category, details, photo, userId, rating }
 
         console.log(newToy);
 
@@ -42,7 +43,7 @@ const AddToy = () => {
                         title: 'Success!',
                         text: 'Coffee Added Successfully',
                         icon: 'success',
-                        confirmButtonText: 'Cool'
+                        confirmButtonText: 'Okey'
                       })
                 }
             })

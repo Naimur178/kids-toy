@@ -5,40 +5,40 @@ import Swal from 'sweetalert2';
 const ToyCard = ({toy, toys, setToys}) => {
     const { _id, name, quantity, supplier, price, photo, details } = toy;
 
-    const handleDelete = _id => {
-        console.log(_id);
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-            if (result.isConfirmed) {
+    // const handleDelete = _id => {
+    //     console.log(_id);
+    //     Swal.fire({
+    //         title: 'Are you sure?',
+    //         text: "You won't be able to revert this!",
+    //         icon: 'warning',
+    //         showCancelButton: true,
+    //         confirmButtonColor: '#3085d6',
+    //         cancelButtonColor: '#d33',
+    //         confirmButtonText: 'Yes, delete it!'
+    //     }).then((result) => {
+    //         if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/toys/${_id}`, {
-                    method: 'DELETE'
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data);
-                        if (data.deletedCount > 0) {
-                            Swal.fire(
-                                'Deleted!',
-                                'Your Coffee has been deleted.',
-                                'success'
-                            )
-                            const remaining = toys.filter(cof => cof._id !== _id);
-                            setToys(remaining);
-                        }
-                    })
+    //             fetch(`http://localhost:5000/toys/${_id}`, {
+    //                 method: 'DELETE'
+    //             })
+    //                 .then(res => res.json())
+    //                 .then(data => {
+    //                     console.log(data);
+    //                     if (data.deletedCount > 0) {
+    //                         Swal.fire(
+    //                             'Deleted!',
+    //                             'Your Coffee has been deleted.',
+    //                             'success'
+    //                         )
+    //                         const remaining = toys.filter(cof => cof._id !== _id);
+    //                         setToys(remaining);
+    //                     }
+    //                 })
 
-            }
-        })
-    }
+    //         }
+    //     })
+    // }
     return (
         // <div className="card card-side bg-base-100 shadow-xl">
         //     <figure><img src={photo} alt="Movie" /></figure>
@@ -68,9 +68,8 @@ const ToyCard = ({toy, toys, setToys}) => {
     <h2 className="card-title">{name}</h2>
     <p>{details}</p>
     <div className="card-actions justify-end">
-      <button  className="btn btn-outline">Edit Now</button>
-      <button  onClick={() => handleDelete(_id)} className="btn btn-outline">Delete</button>
-      <button className="btn btn-outline">Update</button>
+      <Link to={`/toysDetails/${_id}`} className='btn btn-outline'>View Details</Link>
+      
     </div>
   </div>
 </div>
