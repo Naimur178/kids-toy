@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../provider/AuthProvider';
 
 const AddToy = () => {
+    const { user } = useContext(AuthContext);
+    const userId = user?.email;
+    console.log(userId)
     const handleAddToy = event => {
         event.preventDefault();
+        
+
 
         const form = event.target;
 
@@ -14,8 +20,9 @@ const AddToy = () => {
         const category = form.category.value;
         const details = form.details.value;
         const photo = form.photo.value;
+        
 
-        const newToy = { name, quantity, supplier, price, category, details, photo }
+        const newToy = { name, quantity, supplier, price, category, details, photo, userId }
 
         console.log(newToy);
 

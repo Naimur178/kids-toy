@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const ToyCard = ({toy, toys, setToys}) => {
-    const { _id, name, quantity, supplier, price, photo } = toy;
+    const { _id, name, quantity, supplier, price, photo, details } = toy;
 
     const handleDelete = _id => {
         console.log(_id);
@@ -32,7 +32,7 @@ const ToyCard = ({toy, toys, setToys}) => {
                                 'success'
                             )
                             const remaining = toys.filter(cof => cof._id !== _id);
-                            setCoffees(remaining);
+                            setToys(remaining);
                         }
                     })
 
@@ -40,28 +40,40 @@ const ToyCard = ({toy, toys, setToys}) => {
         })
     }
     return (
-        <div className="card card-side bg-base-100 shadow-xl">
-            <figure><img src={photo} alt="Movie" /></figure>
-            <div className="flex justify-between w-full pr-4">
-                <div>
-                    <h2 className="card-title">Name: {name}</h2>
-                    <p>{quantity}</p>
-                    <p>{supplier}</p>
-                    <p>{price}</p>
-                </div>
-                <div className="card-actions justify-end">
-                    <div className="btn-group btn-group-vertical space-y-4">
-                        <button className="btn">View</button>
-                        <Link to={`updateCoffee/${_id}`}>
-                        <button className="btn">Edit</button>
-                        </Link>
-                        <button
-                            onClick={() => handleDelete(_id)}
-                            className="btn bg-orange-500">X</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        // <div className="card card-side bg-base-100 shadow-xl">
+        //     <figure><img src={photo} alt="Movie" /></figure>
+        //     <div className="flex justify-between w-full pr-4">
+        //         <div>
+        //             <h2 className="card-title">Name: {name}</h2>
+        //             <p>{quantity}</p>
+        //             <p>{supplier}</p>
+        //             <p>{price}</p>
+        //         </div>
+        //         <div className="card-actions justify-end">
+        //             <div className="btn-group btn-group-vertical space-y-4">
+        //                 <button className="btn">View</button>
+        //                 <Link to={`updateCoffee/${_id}`}>
+        //                 <button className="btn">Edit</button>
+        //                 </Link>
+        //                 <button
+        //                     onClick={() => handleDelete(_id)}
+        //                     className="btn bg-orange-500">X</button>
+        //             </div>
+        //         </div>
+        //     </div>
+        // </div>
+        <div className="card w-96 bg-base-100 shadow-xl">
+  <figure><img src={photo} alt="Shoes" /></figure>
+  <div className="card-body">
+    <h2 className="card-title">{name}</h2>
+    <p>{details}</p>
+    <div className="card-actions justify-end">
+      <button  className="btn btn-outline">Edit Now</button>
+      <button  onClick={() => handleDelete(_id)} className="btn btn-outline">Delete</button>
+      <button className="btn btn-outline">Update</button>
+    </div>
+  </div>
+</div>
     );
     
 };
