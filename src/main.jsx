@@ -10,6 +10,7 @@ import Login from './components/Login/Login.jsx'
 import Register from './components/Register/Register.jsx'
 import Blog from './components/Blog/Blog.jsx'
 import AllToys from './components/AllToys/AllToys.jsx'
+import MyToys from './components/MyToys/MyToys.jsx'
 
 
 const router = createBrowserRouter([
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
      {
       path: 'alltoys',
       element: <AllToys></AllToys>
+     },
+     {
+      path:'mytoys',
+      element: <MyToys></MyToys>
      }
      
       

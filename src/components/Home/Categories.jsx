@@ -1,14 +1,28 @@
 import React from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 const Categories = () => {
     return (
-        <div className=' mx-auto mt-16 my-8'>
+        <div>
+          <div className=' mx-auto mt-16 my-8'>
       <div className='text-center my-8 w-3/4 mx-auto'>
-        <h2 className='pb-4 text-4xl font-bold'>Food Category</h2>
+        <h2 className='pb-4 text-4xl font-bold'>Sort By Category</h2>
         <p>Our Chinese chefs are true masters of their craft, with a passion for creating the most delicious and authentic Chinese cuisine. Their skill and expertise are evident in every dish they prepare, and their commitment to using only the freshest and highest quality ingredients is truly impressive.</p>
       </div>
-      <div className='grid lg:grid-cols-2 gap-4'>
-        <div className="hero  bg-base-200 rounded-2xl hover:shadow-green-300 hover:shadow-2xl">
+      
+
+    </div>
+    <Tabs>
+    <TabList>
+      <Tab>Marvel</Tab>
+      <Tab>DC Comics</Tab>
+      <Tab>Anime</Tab>
+    </TabList>
+
+    <TabPanel>
+    <div className='grid grid-cols-3 gap-4'>
+    <div className="hero  bg-base-200 rounded-2xl hover:shadow-green-300 hover:shadow-2xl">
           <div className="hero-content flex-col lg:flex-row">
           <img src='https://img.freepik.com/free-photo/high-angle-japanese-dumplings-composition_23-2148809869.jpg?w=1060&t=st=1683220825~exp=1683221425~hmac=707e10381349bda3a43d83a12e077d08ea053560c051a4a9083af6098bd9a0f7' className='w-1/2 rounded-2xl mask mask-squircle '></img>
             <div>
@@ -20,7 +34,7 @@ const Categories = () => {
         </div>
         <div className="hero  bg-base-200 rounded-2xl hover:shadow-green-300 hover:shadow-2xl">
           <div className="hero-content flex-col lg:flex-row">
-          <img src='https://img.freepik.com/free-photo/stir-fry-chicken-zucchini-sweet-peppers-green-onion-with-chopsticks_2829-10785.jpg?w=1060&t=st=1683221003~exp=1683221603~hmac=97c0747383bcbe79df17686d1ccbb6f9e6c63b79fcfed88bec45e905e4419718' className='w-1/2 rounded-2xl mask mask-squircle'></img>
+          <img src='https://static-01.daraz.com.bd/p/ebf283b36e8fdedd6e4c6ce5d9167510.jpg' className='w-1/2 rounded-xl'></img>
             <div>
               <h1 className="text-5xl font-bold">Noodles</h1>
               <p className="py-6">Chinese noodles come in various shapes and sizes and can be served <br /> in soups, stir-fries, and other dishes</p>
@@ -38,7 +52,11 @@ const Categories = () => {
             </div>
           </div>
         </div>
-        <div className=" bg-base-200 rounded-2xl hover:shadow-green-300 hover:shadow-2xl">
+    </div>
+    </TabPanel>
+    <TabPanel>
+    <div className='grid grid-cols-3 gap-4'>
+    <div className=" bg-base-200 rounded-2xl hover:shadow-green-300 hover:shadow-2xl">
           <div className="hero-content flex-col lg:flex-row">
           <img src='https://img.freepik.com/premium-photo/veg-chicken-manchurian-with-gravy-popular-food-india-served-bowl-with-chopstick_466689-34961.jpg?w=1060' className='w-1/2 rounded-2xl mask mask-squircle'></img>
             <div>
@@ -68,9 +86,14 @@ const Categories = () => {
             </div>
           </div>
         </div>
-      </div>
-
     </div>
+    </TabPanel>
+    <TabPanel>
+      hello from anime
+    </TabPanel>
+  </Tabs>
+
+        </div>
     )
     };
 export default Categories;

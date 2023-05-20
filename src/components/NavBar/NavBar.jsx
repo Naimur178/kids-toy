@@ -25,9 +25,20 @@ const NavBar = () => {
           </div>
           <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <Link to="/" className='mx-3'>Home</Link>
+                        
+                        {
+                            user ? <div>
+                                <Link to="/" className='mx-3'>Home</Link>
                         <Link to="/blog" className='mx-3'>Blog</Link>
                         <Link to='/alltoys'>All Toys</Link>
+                        <Link to='/mytoys' className='px-3'>My Toys</Link>
+
+                            </div> : <div>
+                            <Link to="/" className='mx-3'>Home</Link>
+                        <Link to="/blog" className='mx-3'>Blog</Link>
+                        <Link to='/alltoys'>All Toys</Link>
+                            </div>
+                        }
                         
                        
                         

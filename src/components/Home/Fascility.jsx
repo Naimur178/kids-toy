@@ -10,7 +10,7 @@ const Fascility = () => {
             <div>
             <div className='grid grid-cols-3 gap-4'>
                 <div className="card  bg-base-300 shadow-xl">
-                    <figure className='text-6xl'><BiSupport></BiSupport></figure>
+                    <figure className='text-6xl pt-3'><BiSupport></BiSupport></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                             24/7 Online Support
@@ -20,8 +20,8 @@ const Fascility = () => {
                         
                     </div>
                 </div>
-                <div className="card  bg-base-100 shadow-xl">
-                    <figure className='text-6xl text-pink-400'><FaShippingFast></FaShippingFast></figure>
+                <div className="card  bg-base-300 shadow-xl">
+                    <figure className='text-6xl pt-3'><FaShippingFast></FaShippingFast></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                         Fast Delivary
@@ -31,8 +31,8 @@ const Fascility = () => {
                        
                     </div>
                 </div>
-                <div className="card bg-base-100 shadow-xl">
-                    <figure className='text-6xl'><BsCashCoin></BsCashCoin></figure>
+                <div className="card bg-base-300 shadow-xl">
+                    <figure className='text-6xl pt-3'><BsCashCoin></BsCashCoin></figure>
                     <div className="card-body">
                         <h2 className="card-title">
                             Money Back
