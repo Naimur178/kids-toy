@@ -15,6 +15,7 @@ import AddToy from './components/AddToy.jsx'
 import PrivateRoute from './components/routes/PrivateRoute.jsx'
 import ToyDetails from './components/AllToys/ToyDetails.jsx'
 import UpdateToy from './components/UpdateToy.jsx'
+import Error from './components/Error/Error.jsx'
 
 
 const router = createBrowserRouter([
@@ -71,6 +72,11 @@ const router = createBrowserRouter([
 
     ]
   },
+  {
+    path: '*',
+    element: <Error></Error>,
+    
+  }
   
 
 ])
