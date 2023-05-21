@@ -3,45 +3,47 @@ import React from "react";
 const Review = () => {
   return (
     <div className="">
-      <h2 className="text-3xl font-bold text-center mt-5">Customer Review</h2>
+      <h2 className="text-5xl font-semibold text-center mt-5">Customer Review</h2>
       <div className="grid lg:grid-cols-2 gap-6 my-8">
         <div className="bg-base-300">
           <div>
-            <div className="flex  flex-row items-center"> 
+            <div className="flex  flex-row items-center justify-between"> 
               <img
-                src="https://img.freepik.com/free-photo/high-angle-japanese-dumplings-composition_23-2148809869.jpg?w=1060&t=st=1683220825~exp=1683221425~hmac=707e10381349bda3a43d83a12e077d08ea053560c051a4a9083af6098bd9a0f7"
-                className="w-1/2 rounded-2xl mask mask-squircle "
+                src="https://img.freepik.com/free-photo/portrait-beautiful-face-young-woman-with-long-brown-hair_186202-4331.jpg?w=740&t=st=1684667979~exp=1684668579~hmac=278cf15294715d4d91619e75e10585b701c86e6f915670e773300a3ca6081da8"
+                className="w-1/3 rounded-2xl mask mask-circle pt-3"
               ></img>
 
-              <div>
-              <h2>Name</h2>
-              <p>Rating</p>
-              </div>
-            </div>
-          </div>
-          <p>
+              <div className="ms-5">
+              <h2 className="text-xl font-semibold">Julia Adams</h2>
+              <p><span className="font-semibold">Rating: </span> 4.5</p>
+              <p className="mt-5 italic">
             The customer service at this toy shop is exceptional. They went
             above and beyond to help me find the perfect toy.
           </p>
+              </div>
+            </div>
+          </div>
+          
         </div>
         <div className="bg-base-300 p-5 rounded-xl">
           <div>
           <div className="flex  flex-row items-center"> 
-              <img
-                src="https://img.freepik.com/free-photo/high-angle-japanese-dumplings-composition_23-2148809869.jpg?w=1060&t=st=1683220825~exp=1683221425~hmac=707e10381349bda3a43d83a12e077d08ea053560c051a4a9083af6098bd9a0f7"
-                className="w-1/2 rounded-2xl mask mask-squircle "
+              <img 
+                src="https://img.freepik.com/free-photo/handsome-man-with-his-arms-crossed-white-background_1368-4287.jpg?w=740&t=st=1684667291~exp=1684667891~hmac=78fb47991e0cfbd8e51477be01d391cd6036d443c958dd864229f23abeac9fb9"
+                className="w-1/3 rounded-2xl mask mask-circle "
               ></img>
 
-              <div>
-              <h2>Name</h2>
-              <p>Rating</p>
-              </div>
-            </div>
-          </div>
-          <p>
+              <div className="ms-5">
+              <h2 className="text-xl font-semibold">John Copperfield</h2>
+              <p><span className="font-semibold">Rating:</span> 4.8</p>
+              <p className="mt-4 italic">
             The customer service at this toy shop is exceptional. They went
             above and beyond to help me find the perfect toy.
           </p>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>

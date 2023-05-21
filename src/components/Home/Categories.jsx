@@ -25,7 +25,7 @@ const Categories = () => {
     <div>
       <div className=" mx-auto mt-16 my-8">
         <div className="text-center my-8 w-3/4 mx-auto">
-          <h2 className="pb-4 text-4xl font-bold">Sort By Category</h2>
+          <h2 className="pb-4 text-5xl font-semibold">Sort By Category</h2>
           
         </div>
       </div>
@@ -37,7 +37,7 @@ const Categories = () => {
         </TabList>
 
         <TabPanel>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <div className="hero  bg-base-200 rounded-2xl hover:shadow-green-300 hover:shadow-2xl">
               {
                 animeToys?.map(animeToy =>{
@@ -47,13 +47,14 @@ const Categories = () => {
                   src={animeToy.photo}
                   className="w-1/2 rounded-xl"
                 ></img>
-                <div>
-                  <h1 className="text-5xl font-bold">Noodles</h1>
-                  <p className="py-6">
-                    Chinese noodles come in various shapes and sizes and can be
-                    served <br /> in soups, stir-fries, and other dishes
+                <div className="relative">
+                  <h1 className="text-3xl font-bold ">{animeToy.name}</h1>
+                  <p className="">
+                    {animeToy.description}
                   </p>
-                  <button className="btn btn-outline mx-auto">View All</button>
+                  <p className=""><span className="font-bold">Price:</span> {animeToy.price}tk</p>
+                  <p className="mb-4"><span className="font-bold">Rating:</span> {animeToy.rating}</p>
+                  <button className="btn btn-outline mx-auto w-full mt-auto ">Details</button>
                 </div>
               </div>
             </div>
@@ -64,7 +65,7 @@ const Categories = () => {
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <div className=" bg-base-200 rounded-2xl hover:shadow-green-300 hover:shadow-2xl">
             {
                 marvelToys?.map(marvelToy =>{
@@ -74,13 +75,14 @@ const Categories = () => {
                   src={marvelToy.photo}
                   className="w-1/2 rounded-xl"
                 ></img>
-                <div>
-                  <h1 className="text-5xl font-bold">Noodles</h1>
-                  <p className="py-6">
-                    Chinese noodles come in various shapes and sizes and can be
-                    served <br /> in soups, stir-fries, and other dishes
+                <div className="relative">
+                  <h1 className="text-3xl font-bold">{marvelToy.name}</h1>
+                  <p className="">
+                    {marvelToy.description}
                   </p>
-                  <button className="btn btn-outline mx-auto">View All</button>
+                  <p className=""><span className="font-bold">Price:</span> {marvelToy.price}tk</p>
+                  <p className="mb-4"><span className="font-bold">Rating:</span> {marvelToy.rating}</p>
+                  <button className="btn btn-outline mx-auto w-full mt-auto ">Details</button>
                 </div>
               </div>
             </div>
@@ -91,7 +93,7 @@ const Categories = () => {
           </div>
         </TabPanel>
         <TabPanel>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 gap-4">
             <div className=" bg-base-200 rounded-2xl hover:shadow-green-300 hover:shadow-2xl">
             {
                 dcToys?.map(dcToy =>{
@@ -101,13 +103,14 @@ const Categories = () => {
                   src={dcToy.photo}
                   className="w-1/2 rounded-xl"
                 ></img>
-                <div>
-                  <h1 className="text-5xl font-bold">Noodles</h1>
-                  <p className="py-6">
-                    Chinese noodles come in various shapes and sizes and can be
-                    served <br /> in soups, stir-fries, and other dishes
+                <div className="relative">
+                  <h1 className="text-3xl font-bold">{dcToy.name}</h1>
+                  <p className="">
+                    {dcToy.description}
                   </p>
-                  <button className="btn btn-outline mx-auto">View All</button>
+                  <p className="">Price: {dcToy.price}tk</p>
+                  <p>Rating: {dcToy.rating}</p>
+                  <button className="btn btn-outline mx-auto w-full mt-auto absolute -bottom-16">Details</button>
                 </div>
               </div>
             </div>
