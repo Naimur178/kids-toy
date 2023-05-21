@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const ToyCard = ({toy}) => {
-    const { _id, name, quantity, supplier, price, photo, description } = toy;
+    const { _id, name, quantity, supplier, price, photo, description, category } = toy;
 
     // const handleDelete = _id => {
     //     console.log(_id);
@@ -67,6 +67,10 @@ const ToyCard = ({toy}) => {
   <div className="card-body">
     <h2 className="card-title">{name}</h2>
     <p>{description}</p>
+    <p>Seller: {supplier}</p>
+    <p>Category: {category}</p>
+    <p>Price: {price}</p>
+    <p>Stock: {quantity}</p>
     <div className="card-actions justify-end">
       <Link to={`/toysDetails/${_id}`} className='btn btn-outline'>View Details</Link>
       
