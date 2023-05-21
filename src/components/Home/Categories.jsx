@@ -9,7 +9,7 @@ const Categories = () => {
   const [dcToys, setDcToys] = useState([]);
   const [animeToys, setAnimeToys] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/toys")
+    fetch("https://assignment11-server-vert.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -39,7 +39,7 @@ const Categories = () => {
 
         <TabPanel>
           <div className="">
-            <div className="  rounded-2xl  grid grid-cols-2 gap-4">
+            <div className="  rounded-2xl  lg:grid grid-cols-2 gap-4">
               {animeToys?.map((animeToy) => {
                 return (
                   <div
@@ -82,7 +82,7 @@ const Categories = () => {
         </TabPanel>
         <TabPanel>
           <div className="">
-            <div className="  rounded-2xl  grid grid-cols-2 gap-4">
+            <div className="  rounded-2xl  grid lg:grid-cols-2 gap-4">
               {marvelToys?.map((marvelToy) => {
                 return (
                   <div
@@ -123,7 +123,7 @@ const Categories = () => {
         </TabPanel>
         <TabPanel>
           <div className="">
-            <div className="  grid grid-cols-2 gap-4">
+            <div className="  grid lg:grid-cols-2 gap-4">
               {dcToys?.map((dcToy) => {
                 return (
                   <div

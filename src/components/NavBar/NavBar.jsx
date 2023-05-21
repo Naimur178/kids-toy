@@ -21,7 +21,11 @@ const NavBar = () => {
 
 
               </div>
+
+              <div className='lg:flex'>
+                <img src="../../../public/logo.png" alt="" className='w-20'/>
               <a className="btn btn-ghost normal-case text-xl">Kids Play</a>
+              </div>
           </div>
           <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

@@ -9,7 +9,7 @@ const Galary = () => {
       }, []);
       
     return (
-        <div className='grid grid-cols-4 gap-4 bg-pink-300 px-3 my-4'>
+        <div className='grid lg:grid-cols-4 gap-4 bg-pink-300 px-3 my-4'>
             <div data-aos="fade-left">
             <img src="https://img.freepik.com/free-vector/super-kiddo-logo-text-design_1308-73565.jpg?w=1060&t=st=1684671068~exp=1684671668~hmac=d8e56aa5e257ef923b0c702496c67685b2aa9615273c7028fb79625123e52d9e" alt="" className='py-4' />
         </div>

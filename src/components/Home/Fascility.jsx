@@ -8,8 +8,8 @@ const Fascility = () => {
         <div className='my-8'>
             <h2 className='text-center text-4xl font-semibold my-4 pt-8'>Why we are best?</h2>
             <div>
-            <div className='grid grid-cols-3 gap-4'>
-                <div className="card  bg-base-300 shadow-xl">
+            <div className='grid lg:grid-cols-3 gap-4'>
+                <div className="card mb-2  bg-base-300 shadow-xl">
                     <figure className='text-6xl pt-3'><BiSupport></BiSupport></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -20,7 +20,7 @@ const Fascility = () => {
                         
                     </div>
                 </div>
-                <div className="card  bg-base-300 shadow-xl">
+                <div className="card  bg-base-300 shadow-xl mb-2">
                     <figure className='text-6xl pt-3'><FaShippingFast></FaShippingFast></figure>
                     <div className="card-body">
                         <h2 className="card-title">

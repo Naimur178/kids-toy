@@ -13,7 +13,7 @@ const Kids = () => {
     return (
         <div className='mt-12'> 
             <h2 className='text-center text-4xl font-semibold my-8'>Kids Galary</h2>
-            <div className='grid grid-cols-3'>
+            <div className='grid lg:grid-cols-3'>
                 <img src="https://img.freepik.com/free-photo/little-girl-playing-with-toys-living-room_329181-9334.jpg?w=1060&t=st=1684673591~exp=1684674191~hmac=b3e30342893408bac4debbdb3d22fd00889d68297e410fdfd96461a05dc07f06" alt="" data-aos="flip-right" />
                 <img src="https://img.freepik.com/free-photo/boy-girl-home-playing-with-toys-together_23-2148630635.jpg?w=1060&t=st=1684673866~exp=1684674466~hmac=0c2309610773c3f280f0d98bc46c24f969022c3d488bb1345deeb3c73f6ea353" alt="" data-aos="flip-right" />
                 <img src="https://img.freepik.com/free-photo/close-up-child-playing-her-room_23-2149208189.jpg?w=1060&t=st=1684673893~exp=1684674493~hmac=a8d638b6371b9010a5326a6a180f9a46fd309169bad1a061a4004250709c6cdc" alt="" data-aos="flip-right" />

@@ -10,7 +10,7 @@ const AllToys = () => {
     
     return (
         <div className=' '>
-      <h1 className='text-4xl font-bold text-center py-20 bg-cyan-500 mb-5 text-white'>All Toys</h1>
+      <h1 className='text-4xl font-bold text-center py-20 bg-cyan-400 mb-5 text-white'>All Toys</h1>
       <div className='grid md:grid-cols-3 gap-5'>
         {
           toys?.map(toy => <ToyCard
