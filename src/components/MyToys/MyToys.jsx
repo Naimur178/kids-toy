@@ -65,7 +65,8 @@ const MyToys = () => {
 }
   return (
     <div>
-      <div className="grid grid-cols-2 gap-4">
+      <h2 className="bg-cyan-400 text-center py-12 text-4xl font-semibold text-white mb-6">My Toys</h2>
+      <div className="grid grid-cols-2 gap-4 mb-3">
         <button className="btn btn-outline w-full" onClick={sortLowToHigh}>Price Low to High</button>
         <button className="btn btn-outline w-full" onClick={ sortHighToLow}>Price High to Low</button>
       </div>

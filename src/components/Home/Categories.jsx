@@ -25,7 +25,7 @@ const Categories = () => {
     <div>
       <div className=" mx-auto mt-16 my-8">
         <div className="text-center my-8 w-3/4 mx-auto">
-          <h2 className="pb-4 text-5xl font-semibold">Sort By Category</h2>
+          <h2 className="pb-4 text-4xl font-semibold pt-8">Sort By Category</h2>
           
         </div>
       </div>

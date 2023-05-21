@@ -6,7 +6,7 @@ import { BiSupport } from "react-icons/bi";
 const Fascility = () => {
     return (
         <div className='my-8'>
-            <h2 className='text-center text-3xl font-bold my-4'>Why we are best?</h2>
+            <h2 className='text-center text-4xl font-semibold my-4 pt-8'>Why we are best?</h2>
             <div>
             <div className='grid grid-cols-3 gap-4'>
                 <div className="card  bg-base-300 shadow-xl">
