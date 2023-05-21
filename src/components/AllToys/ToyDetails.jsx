@@ -22,6 +22,7 @@ const ToyDetails = () => {
             <div className="badge badge-secondary">NEW</div>
           </h2>
           <p>{toy.details}</p>
+          <p>{toy.description}</p>
           <p>Seller: {toy.supplier}</p>
           <p>Email: {user.email}</p>
           <p>In Stock: {toy.quantity}</p>

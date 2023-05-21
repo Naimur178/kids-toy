@@ -4,17 +4,13 @@ import ToyCard from './ToyCard';
 // import ToyCard from './ToyCard';
 
 const AllToys = () => {
-  const [toys, setToys] =useState();
-  const loadedToys = useLoaderData();
-  console.log(loadedToys)
+  
+  const toys = useLoaderData();
+  
   
  
    
-    useEffect(() => {
-      fetch('http://localhost:5000/toys')
-      .then(res => res.json())
-      .then(data =>setToys(data))
-    },[])
+    
     
     console.log(toys)
     
@@ -27,7 +23,7 @@ const AllToys = () => {
             key={toy._id}
             toy={toy}
             toys={toys}
-            setToys={setToys}
+            
           ></ToyCard>)
         }
       </div>
