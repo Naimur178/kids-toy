@@ -4,5 +4,5 @@
 <li>A toy website for kids</li>
 <li>One type of Admin site projects</li>
 <li>User can Add toy delete toy and update it</li>
-<li>User can see his </li>
+<li>User can see his toys that he/she have added </li>
 </ul>
