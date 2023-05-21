@@ -23,7 +23,7 @@ const NavBar = () => {
               </div>
 
               <div className='lg:flex'>
-                <img src="../../../public/logo.png" alt="" className='w-20'/>
+                <img src="/logo.png" alt="" className='w-20'/>
               <a className="btn btn-ghost normal-case text-xl">Kids Play</a>
               </div>
           </div>

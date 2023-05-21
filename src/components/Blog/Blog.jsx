@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Blog = () => {
+    useEffect(() => {
+        document.title = "Blog"; 
+      }, []);
+    
     return (
         <div className=' mx-auto my-8 bg-base-200 rounded-xl p-4'>
             <div >

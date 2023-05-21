@@ -4,6 +4,9 @@ import ToyCard from './ToyCard';
 // import ToyCard from './ToyCard';
 
 const AllToys = () => {
+  useEffect(() => {
+    document.title = "All Toys"; 
+  }, []);
   
   const toys = useLoaderData();
     console.log(toys)

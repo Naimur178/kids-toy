@@ -50,8 +50,8 @@ const AddToy = () => {
             })
     }
     return (
-        <div className="bg-[#F4F3F0] p-24">
-            <h2 className="text-3xl font-extrabold">Add a Toy</h2>
+        <div className=" p-24 border-2xl shadow-2xl">
+            <h2 className="text-3xl font-semibold text-center mb-4 ">Add a Toy</h2>
             <form onSubmit={handleAddToy}>
                 {/* form name and quantity row */}
                 <div className="md:flex mb-8">

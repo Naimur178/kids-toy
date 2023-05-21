@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
@@ -9,6 +9,9 @@ import { GithubAuthProvider } from "firebase/auth";
 
 
 const Login = () => {
+    useEffect(() => {
+        document.title = "Login"; 
+      }, []);
     const [errors, setErrors] = useState();
     const navigate = useNavigate();
     const { logIn } = useContext(AuthContext);

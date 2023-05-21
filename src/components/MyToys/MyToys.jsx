@@ -4,6 +4,9 @@ import { AuthContext } from "../../provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const MyToys = () => {
+  useEffect(() => {
+    document.title = "My Toys"; 
+  }, []);
   const [toys, setToys] = useState([]);
   const { user } = useContext(AuthContext);
   const myLoadedToys = useLoaderData();
@@ -18,6 +21,7 @@ const MyToys = () => {
     
   }
   const sortLowToHigh = () =>{
+    
     console.log('hello from high to low')
     
       const sorted = [...filteredToy].sort((a,b) => a.price - b.price);
