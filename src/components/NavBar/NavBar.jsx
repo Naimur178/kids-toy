@@ -32,7 +32,8 @@ const NavBar = () => {
                         <Link to="/blog" className='mx-3'>Blog</Link>
                         <Link to='/alltoys'>All Toys</Link>
                         <Link to='/mytoys' className='px-3'>My Toys</Link>
-                        
+                        <Link to='/blog'>Blog</Link>
+
 
                             </div> : <div>
                             <Link to="/" className='mx-3'>Home</Link>
