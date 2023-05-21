@@ -10,8 +10,22 @@ const MyToys = () => {
   
   // console.log(myLoadedToys);
   let filteredToy = myLoadedToys?.filter((toy) => toy.userId == user.email);
+  const sortHighToLow = () =>{
+    console.log('hello from high to low')
+    
+      const sorted = [...filteredToy].sort((a,b) => b.price - a.price);
+      setToys(sorted);
+    
+  }
+  const sortLowToHigh = () =>{
+    console.log('hello from high to low')
+    
+      const sorted = [...filteredToy].sort((a,b) => a.price - b.price);
+      setToys(sorted);
+  }
   
   useEffect(()=>{
+    
 		setToys(filteredToy);
 	}, [])
 
@@ -51,6 +65,10 @@ const MyToys = () => {
 }
   return (
     <div>
+      <div className="grid grid-cols-2 gap-4">
+        <button className="btn btn-outline w-full" onClick={sortLowToHigh}>Price Low to High</button>
+        <button className="btn btn-outline w-full" onClick={ sortHighToLow}>Price High to Low</button>
+      </div>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
@@ -64,6 +82,7 @@ const MyToys = () => {
               <th>Name</th>
               <th>Description</th>
               <th>Category</th>
+              <th>Price</th>
               <th></th>
               <th></th>
             </tr>
@@ -89,7 +108,7 @@ const MyToys = () => {
                     </div>
                     <div>
                       <div className="font-bold">{toy.name}</div>
-                      <div className="text-sm opacity-50">United States</div>
+                      {/* <div className="text-sm opacity-50">United States</div> */}
                     </div>
                   </div>
                 </td>
@@ -99,6 +118,7 @@ const MyToys = () => {
                   
                 </td>
                 <td><p className="bg-pink-300 rounded-xl px-2">{toy.category}</p></td>
+                <td>{toy.price}tk</td>
                 <th>
                   <Link to={`/updateToy/${toy._id}`} className="btn btn-ghost btn-xs hover:bg-yellow-400">Update</Link>
                 </th>
