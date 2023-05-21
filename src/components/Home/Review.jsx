@@ -1,4 +1,6 @@
 import React from "react";
+import Rating from "react-rating";
+import { FaRegStar, FaStar, FaStarAndCrescent } from 'react-icons/fa';
 
 const Review = () => {
   return (
@@ -15,7 +17,12 @@ const Review = () => {
 
               <div className="ms-5">
               <h2 className="text-xl font-semibold">Julia Adams</h2>
-              <p><span className="font-semibold">Rating: </span> 4.5</p>
+              <p><span className="font-semibold">Rating: </span> <Rating
+                              emptySymbol={<FaRegStar></FaRegStar>}
+                              fullSymbol={<FaStar color="orange"></FaStar>}
+                              initialRating={4.1}
+                              readonly
+                            ></Rating></p>
               <p className="mt-5 italic">
             The customer service at this toy shop is exceptional. They went
             above and beyond to help me find the perfect toy.
@@ -35,7 +42,12 @@ const Review = () => {
 
               <div className="ms-5">
               <h2 className="text-xl font-semibold">John Copperfield</h2>
-              <p><span className="font-semibold">Rating:</span> 4.8</p>
+              <p><span className="font-semibold">Rating:</span><Rating
+                              emptySymbol={<FaRegStar></FaRegStar>}
+                              fullSymbol={<FaStar color="orange"></FaStar>}
+                              initialRating={4.8}
+                              readonly
+                            ></Rating></p>
               <p className="mt-4 italic">
             The customer service at this toy shop is exceptional. They went
             above and beyond to help me find the perfect toy.

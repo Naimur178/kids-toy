@@ -9,7 +9,7 @@ const ToyDetails = () => {
 
   return (
     <div>
-      <div className="card w-1/2 bg-base-100 shadow-xl mx-auto ">
+      <div className="card w-3/4 bg-base-100 shadow-xl mx-auto ">
         <figure>
           <img
             src={toy.photo}
