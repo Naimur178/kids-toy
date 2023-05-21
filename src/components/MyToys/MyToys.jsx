@@ -1,13 +1,54 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const MyToys = () => {
+  const [toys, setToys] = useState([]);
   const { user } = useContext(AuthContext);
   const myLoadedToys = useLoaderData();
+  
   // console.log(myLoadedToys);
-  const filteredToy = myLoadedToys?.filter((toy) => toy.userId == user.email);
-  console.log(filteredToy);
+  let filteredToy = myLoadedToys?.filter((toy) => toy.userId == user.email);
+  
+  useEffect(()=>{
+		setToys(filteredToy);
+	}, [])
+
+  const handleDelete = _id => {
+    console.log(_id);
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+
+
+            fetch(`http://localhost:5000/toys/${_id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        Swal.fire(
+                            'Deleted!',
+                            'Your Coffee has been deleted.',
+                            'success'
+                        )
+                        const remaining = toys.filter(cof => cof._id !== _id);
+                        setToys(remaining)
+                    }
+                })
+
+        }
+    })
+}
   return (
     <div>
       <div className="overflow-x-auto w-full">
@@ -29,7 +70,7 @@ const MyToys = () => {
           </thead>
           <tbody>
             {/* row 1 */}
-            {filteredToy.map((toy) => 
+            {toys.map((toy) => 
               <tr key={toy._id}>
                 <th>
                   <label>
@@ -62,7 +103,7 @@ const MyToys = () => {
                   <Link to={`/updateToy/${toy._id}`} className="btn btn-ghost btn-xs hover:bg-yellow-400">Update</Link>
                 </th>
                 <th>
-                  <button className="btn btn-ghost btn-xs hover:bg-red-500 hover:text-white">Delete</button>
+                  <button className="btn btn-ghost btn-xs hover:bg-red-500 hover:text-white" onClick={()=>handleDelete(toy._id)}>Delete</button>
                 </th>
               </tr>
             )}
