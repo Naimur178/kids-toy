@@ -17,7 +17,7 @@ const Register = () => {
         
         const name = form.name.value;
         const email = form.email.value;
-        const photo = form.photo.value;
+        const photoURL = form.photo.value;
         const password = form.password.value;
         if(password.length==0 || email.length==0){
             return setErrors('email and password field cannot be empty')
@@ -26,11 +26,11 @@ const Register = () => {
             return setErrors("password length must be 6 or more ")
         }
         
-        console.log(name, email, photo, password);
+        console.log(name, email, photoURL, password);
         createUser(email, password)
         .then(result =>{
             const createdUser = result.user;
-            updateUserData(result.user, name, photo);
+            updateUserData(result.user, name, photoURL);
             console.log(createdUser);
             setErrors('');
         })

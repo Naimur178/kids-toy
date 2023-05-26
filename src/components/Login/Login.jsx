@@ -51,8 +51,24 @@ const Login = () => {
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
+            const userMail ={
+                email: loggedUser.email
+            }
             navigate(from, {replace: true});
             setErrors(null)
+            fetch('http://localhost:5000/jwt', {
+                method: 'POST',
+                headers: {
+                    'content-type' : 'application/json'
+                },
+                body: JSON.stringify(userMail)
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log('jwt response', data);
+                //Not the best way to set in the localStorage
+                localStorage.setItem('kids-access-token', data.token)
+            })
         } )
         .catch(error => {
             setErrors('Invalid Email or password')

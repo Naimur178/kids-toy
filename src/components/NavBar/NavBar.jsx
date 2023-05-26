@@ -7,7 +7,9 @@ const NavBar = () => {
     const {user, logOut} = useContext(AuthContext);
     const handleLogOut=() =>{
         logOut()
-        .then()
+        .then(()=>{
+            localStorage.removeItem('kids-access-token')
+        })
         .catch(console.error())
     }
     return (

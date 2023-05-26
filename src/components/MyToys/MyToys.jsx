@@ -4,13 +4,24 @@ import { AuthContext } from "../../provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const MyToys = () => {
+  
   useEffect(() => {
     document.title = "My Toys"; 
   }, []);
   const [toys, setToys] = useState([]);
   const { user } = useContext(AuthContext);
-  const myLoadedToys = useLoaderData();
+  console.log(user.email)
   
+  const myLoadedToys = useLoaderData();
+  const [myAddedToys, setMyAddedToys] = useState([]);
+
+    const url = `http://localhost:5000/toys?userId=${user?.email}`;
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setMyAddedToys(data))
+    }, [url]);
+  console.log(myAddedToys)
   // console.log(myLoadedToys);
   let filteredToy = myLoadedToys?.filter((toy) => toy.userId == user.email);
   const sortHighToLow = () =>{
